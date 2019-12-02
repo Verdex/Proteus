@@ -3,7 +3,8 @@
 #include<stdio.h>
 %}
 %%
-[a|b]     { printf("%s\n", yytext); }
+[ \t\n\r] ;
+[a|b]     { printf("blarg %s\n", yytext); }
 %%
 int yywrap() { return 0; }
 
